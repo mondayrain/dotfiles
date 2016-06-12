@@ -1,0 +1,11 @@
+[user]
+	name = Larissa Feng
+	email = larissa.feng@shopify.com
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch
+	cm = commit
+	stat = status
+	squash = rebase -i HEAD~5
