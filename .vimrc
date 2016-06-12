@@ -19,6 +19,6 @@ set hlsearch
 set cursorline
 set nostartofline
 
-" Turn off annoying sound when there are errirs
+" Turn off annoying sound when there are errors
 set noerrorbells
 
