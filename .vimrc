@@ -8,10 +8,12 @@ set smarttab
 set tabstop=2
 set shiftwidth=2
 
-" Syntax, colouring, line numbers
-set number
+" Syntax, colouring, line numbers, status
 syntax on
-colorscheme delek
+colorscheme elflord
+set number
+set laststatus=2
+set statusline+=%F
 
 " Searching and cursoring
 set incsearch
@@ -22,3 +24,10 @@ set nostartofline
 " Turn off annoying sound when there are errors
 set noerrorbells
 
+" Plugins
+execute pathogen#infect()
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+call plug#end()
