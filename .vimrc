@@ -1,33 +1,34 @@
 " General
+execute pathogen#infect()
 set title
 
 " Indentation and tabbing
-filetype indent on
+filetype plugin indent on
 set expandtab
-set smarttab
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 
 " Syntax, colouring, line numbers, status
 syntax on
 colorscheme elflord
-set number
+set relativenumber
 set laststatus=2
 set statusline+=%F
 
-" Searching and cursoring
+" Searching, cursoring, substitution 
 set incsearch
 set hlsearch
 set cursorline
 set nostartofline
+set ignorecase
+set smartcase
+set gdefault
 
-" Turn off annoying sound when there are errors
+" Other stuff 
 set noerrorbells
 
-" Plugins
-execute pathogen#infect()
+" Plugins & shortcuts
+map <C-n> :NERDTreeToggle<CR>
+set runtimepath+=~/.fzf
 
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-call plug#end()
