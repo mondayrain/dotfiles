@@ -15,6 +15,10 @@ Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 
+" Syntastic stuff
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " General
 set title
 set backspace=indent,eol,start
@@ -30,9 +34,6 @@ autocmd FileType python set sts=4
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
-
-" Flag unnecessary whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Syntax, colouring, line numbers, status
 syntax on
