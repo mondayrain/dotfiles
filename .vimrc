@@ -5,8 +5,8 @@ execute pathogen#infect()
 
 filetype plugin indent on
 
-" ctrl-n to toggle NERDtree menu bar
-map <C-n> :NERDTreeToggle<CR>
+" ctrl-t to toggle NERDtree menu bar
+map <C-t> :NERDTreeToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
